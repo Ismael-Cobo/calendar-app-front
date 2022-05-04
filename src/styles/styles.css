@@ -1,0 +1,127 @@
+*{
+  outline: none !important;
+}
+
+textarea:focus, 
+textarea.form-control:focus, 
+input.form-control:focus, 
+input[type=text]:focus, 
+input[type=password]:focus, 
+input[type=email]:focus, 
+input[type=number]:focus, 
+[type=text].form-control:focus, 
+[type=password].form-control:focus, 
+[type=email].form-control:focus, 
+[type=tel].form-control:focus, 
+[contenteditable].form-control:focus {
+  box-shadow: none;
+  border-color: none;
+}
+
+.notification-wrapper {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 300px;
+  z-index: 9999;
+}
+
+.notification-item {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 5px 0 0 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #1F2833;
+  color: white;
+  margin-bottom: 10px;
+  animation: show_slide 0.8s ease forwards;
+  width: 300px;
+}
+
+@keyframes show_slide {
+  0%{
+    transform: translateX(100%);
+  }
+  40%{
+    transform: translateX(-10%);
+  }
+  80%{
+    transform: translateX(0);
+  }
+  100%{
+    transform: translateX(-10px);
+  }
+}
+
+.notification-item.exit{
+  animation: exit_slide 0.8s ease forwards;
+}
+
+
+
+@keyframes exit_slide {
+  0%{
+    transform: translateX(-10px);
+  }
+  40%{
+    transform: translateX(0);
+  }
+  80%{
+    transform: translateX(-10%);
+  }
+  100%{
+      transform: translateX(110%);
+  }
+}
+
+.notification-item p {
+  padding: 0;
+  margin: 10px;
+}
+
+.notification-item .bar {
+  height: 10px;
+}
+
+.notification-item.success .bar{
+  background-color: rgb(61, 167, 61);
+}
+
+.notification-item.error .bar{
+  background-color: rgb(211, 54, 54);
+}
+
+.notification-item.loading .bar{
+background-color: rgb(69, 140, 207);
+}
+
+.invalid {
+  border-color: rgb(211, 54, 54);
+}
+
+.invalid:focus {
+  border-color: rgb(211, 54, 54);
+}
+
+
+.fab{
+  border-radius: 999px;
+  bottom: 25px;
+  font-size: 30px;
+  position: fixed;
+  right: 25px;
+  width: 65px;
+  height: 65px;
+  z-index: 999;
+}
+
+.fab-danger{
+  border-radius: 999px;
+  bottom: 25px;
+  font-size: 30px;
+  position: fixed;
+  right: 120px;
+  width: 65px;
+  height: 65px;
+  z-index: 999;
+}
